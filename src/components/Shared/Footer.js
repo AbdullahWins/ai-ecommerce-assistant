@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="mt-auto mb-0 hidden md:block">
+    <div className="py-12">
       <div className="bg-gray-200 text-center">
         <h2>Copyright © 2023 - Paul Harding</h2>
         <Link to="https://swagdials.com/">

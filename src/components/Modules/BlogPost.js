@@ -13,9 +13,9 @@ const BlogPost = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen justify-between gap-4 p-4">
+    <div className="flex flex-col justify-between gap-4 p-4 bg-gray-100">
       <section className="flex flex-col gap-4 mb-0 pb-0">
-        <h1 className="text-xl font-bold text-center bg-gray-200 p-4">
+        <h1 className="text-xl font-bold text-center bg-gray-400 p-4">
           <span>
             <i className="fa-solid fa-square-rss"></i>
           </span>
