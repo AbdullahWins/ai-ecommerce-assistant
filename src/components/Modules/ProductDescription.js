@@ -36,29 +36,42 @@ const ProductDescription = () => {
             id="input"
           ></input>
           <button
-            className={`btn rounded-sm  px-4 ${
-              isLoading ? "bg-slate-700" : "bg-gray-400"
+            disabled={isLoading}
+            className={`btn rounded-sm px-4 ${
+              isLoading ? "bg-slate-700 w-full" : "bg-gray-400"
             }`}
             onClick={handleClick}
           >
-            <p>
-              <span>
-                <i className="fa-solid fa-gear"></i>
-              </span>
-              {isLoading ? (
+            {isLoading ? (
+              <p>
+                <span>
+                  <i className="fa-solid fa-gear fa-spin"></i>
+                </span>
                 <span> Generating Product Description </span>
-              ) : (
+                <span>
+                  <i className="fa-solid fa-gear fa-spin"></i>
+                </span>
+              </p>
+            ) : (
+              <p>
+                <span>
+                  <i className="fa-solid fa-gear"></i>
+                </span>
                 <span> Generate </span>
-              )}
-              <span>
-                <i className="fa-solid fa-gear"></i>
-              </span>
-            </p>
+                <span>
+                  <i className="fa-solid fa-gear"></i>
+                </span>
+              </p>
+            )}
           </button>
         </div>
         <div>
           <p className="font-bold text-xl text-center py-2">
-            <i className="fa-solid fa-arrow-down"></i>
+            {isLoading ? (
+              <i className="fa-solid fa-arrow-down fa-beat-fade"></i>
+            ) : (
+              <i className="fa-solid fa-arrow-down"></i>
+            )}
           </p>
         </div>
         <textarea
